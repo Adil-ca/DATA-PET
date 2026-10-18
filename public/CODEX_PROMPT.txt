@@ -1,0 +1,54 @@
+CODEX PROMPT — INTEGRATE THE NEW SUI-INSPIRED BIT MASCOT INTO DATA PET
+
+Work inside my existing DATA PET game. Do not create a new project and do not rewrite the game from scratch.
+
+I have supplied a character asset pack with these transparent PNGs:
+- bit-idle.png
+- bit-wave.png
+- bit-inspect.png
+- bit-happy.png
+- bit-thinking.png
+- bit-glitch.png
+- bit-evolved.png
+- bit-celebrate.png
+
+First inspect the repository and copy these images from the extracted asset pack into `public/assets/bit/`. Do not rename them unless you update every reference consistently. Use the supplied art rather than generating replacement images.
+
+## Character direction
+
+Replace the old generic pet artwork with BIT: an original Sui-inspired blue water-drop companion with a crystal tip, expressive eyes, cyan highlights, and a white flowing belly mark. Keep its appearance consistent by using the supplied pose assets. This is an independent community concept, not an official Sui mascot; do not claim official endorsement.
+
+## Map poses to game states
+
+- `bit-idle.png`: default state and waiting between capsules.
+- `bit-wave.png`: welcome / adoption screen.
+- `bit-inspect.png`: while the player inspects the Data Passport.
+- `bit-happy.png`: correct decision and successful feed.
+- `bit-thinking.png`: unclear or restricted rights; holding a capsule for review.
+- `bit-glitch.png`: gentle, funny reaction after an incorrect decision.
+- `bit-evolved.png`: high-trust growth stage / evolution reveal.
+- `bit-celebrate.png`: results screen and final celebration.
+
+## Keep the existing game logic
+
+Preserve all six fictional data capsules, the inspect-before-decision flow, SOURCE / USAGE RIGHTS / INTEGRITY fields, FEED PET and HOLD FOR REVIEW choices, current answer keys, explanations, score, trust meter, growth stages, final evolution, share action if already implemented, and restart behavior. Do not alter answer correctness or game state logic as part of this visual change.
+
+## Visual style
+
+Apply the cinematic design already chosen for DATA PET: a black (#000000) full-screen environment with a subdued ambient video background if configured, dark overlay for text contrast, cyan and Sui-inspired blue highlights, and crisp white UI. Use Inter for body and controls. Use BubbledotICG-FinePos for prominent short headings if the provided font is already loaded; provide graceful fallbacks if unavailable. Keep the pet colorful and brighter than the background.
+
+The character must be large enough to recognize, not a tiny icon. Use transparent PNGs with `object-fit: contain`, preserve aspect ratios, and avoid cropping the head/crystal or feet. Use responsive sizing and subtle CSS entrance/bounce animations that do not interfere with input. Respect `prefers-reduced-motion`.
+
+Keep gameplay clearly readable at desktop and mobile widths. Do not shrink text or buttons to fit. Use large, obvious decisions and allow vertical scrolling on narrow screens if necessary.
+
+## Quality checks
+
+1. Verify that all eight local PNG assets load.
+2. Verify each game state selects the intended pose.
+3. Verify no image is stretched, clipped, or replaced by an emoji.
+4. Test the welcome screen, all six capsules, feedback, evolution, results, and restart.
+5. Keep all existing gameplay behavior intact.
+6. Run the project's build and available type checks; fix discovered errors.
+7. Do not claim the project is deployed unless it has actually been deployed.
+
+Implement these changes directly in the existing project. The goal is to give the game one recognizable mascot and a more polished presentation without making the game more complicated.
